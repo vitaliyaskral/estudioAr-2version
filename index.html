@@ -12,8 +12,8 @@
             /*border: 1px solid red*/
         }
         body { background-image: url(https://upload.wikimedia.org/wikipedia/commons/2/26/El_Paisaje_Manchego_%2813701840255%29.jpg);
-        background-attachment: fixed;
-        background-size: cover;
+            background-attachment: fixed;
+            background-size: cover;
         }
         /********************************************
             BARRA DE NAVEGACIÓN
@@ -23,11 +23,12 @@
             justify-content: space-around; 
             position: sticky;
             top:0;
+
         }
 
         nav a { text-decoration: none;
-                color:white; 
-                padding: 20px;       
+            color:white; 
+            padding: 20px;       
         }
         nav a:hover { color:yellow; font-weight: bold;text-shadow: 3px 3px 3px black;}
         /********************************************
@@ -44,7 +45,7 @@
 
         }
         header h1 { color:yellow;
-             font-size: 4em;}
+            font-size: 4em;}
         header h2 { color:white}
         #caja-titulos { 
             text-align: center;
@@ -68,10 +69,10 @@
             padding: 20px
         }
         #contenedor-obras { display: flex;
-        justify-content: space-around;
-        flex-wrap: wrap;
-        border: 2px solid orange;
-        padding: 10px;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            border: 2px solid orange;
+            padding: 10px;
         
         }
         #contenedor-obras img { width: 80%;}
@@ -105,7 +106,7 @@
         }
         #enlaces {width: 33%; }
         #enlaces a {color:white;
-        text-decoration: none; }
+            text-decoration: none; }
         #enlaces a:hover { font-size: 2em;}
         #email {width: 33%; }
         #estamos-en  {width: 33%; }
@@ -124,6 +125,35 @@
         #contenedor-clientes article h3 { font-style: italic;}
         #contenedor-clientes article img { width: 40%;border-radius: 50%;}
         #izquierda, #derecha { width: 40%;}
+
+        @media (max-width: 600px){
+        /*  se puede hacer de dos maneras:
+         1ª:
+            nav {display: block;}
+            nav a{ display: block;
+                text-align: center;}
+        */
+
+        /*  2ª:     */
+        nav{ flex-wrap: wrap;
+            position: static;
+        }
+        nav a{width: 100%;
+            text-align: center;}  
+/*      1ª versión:
+        #contenedor-servicios{
+            flex-wrap: wrap;
+        }  
+*/
+
+/*      2ª versión:*/
+        #contenedor-servicios{
+            display: block;
+        }          
+        #izquierda, #derecha{width: 100%;} 
+        }
+
+
     </style>
     <script src="https://kit.fontawesome.com/fe060c3d5b.js" crossorigin="anonymous"></script>
 </head>
@@ -143,9 +173,7 @@
     </header>
     <section id="servicios">
         <h1 class="titulo">Servicios</h1>
-        <div id="contenedor-servicios">
-
-           
+        <div id="contenedor-servicios">           
             <iframe id="izquierda" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1836.8079056640304!2d-2.590156815736633!3d39.26260855496169!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ses!4v1702903444679!5m2!1ses!2ses" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             <div id="derecha">
                 <h2>Dónde estamos</h2>
